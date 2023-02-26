@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    name: Run Build
+    name: Run build
     runs-on: ubuntu-latest
 
     steps:
@@ -19,4 +19,4 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: git diff
-      - run: git diff --quiet src/**.ts
+      - run: git diff --quiet assembly/**/*.ts
