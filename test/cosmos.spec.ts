@@ -4,9 +4,9 @@ import {
   Grant,
   encodeGrant,
   decodeGrant,
-} from "../src/cosmos/authz/v1beta1/authz";
-import { Any } from "../src/google/protobuf/any";
-import { Timestamp } from "../src/google/protobuf/timestamp";
+} from "../assembly/cosmos/authz/v1beta1/Grant";
+import { Any } from "../assembly/google/protobuf/Any";
+import { Timestamp } from "../assembly/google/protobuf/Timestamp";
 
 describe("Cosmos SDK", () => {
   test("decodes a grant", () => {

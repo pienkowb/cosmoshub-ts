@@ -4,8 +4,8 @@ import {
   MsgTransfer,
   encodeMsgTransfer,
   decodeMsgTransfer,
-} from "../src/ibc/applications/transfer/v1/tx";
-import { Coin } from "../src/cosmos/base/v1beta1/coin";
+} from "../assembly/ibc/applications/transfer/v1/MsgTransfer";
+import { Coin } from "../assembly/cosmos/base/v1beta1/Coin";
 
 describe("IBC", () => {
   test("decodes a transfer message", () => {
