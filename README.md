@@ -9,7 +9,7 @@ import { Any } from "@graphprotocol/cosmoshub-ts/assembly/google/protobuf/Any";
 import { decodeMsgDelegate } from "@graphprotocol/cosmoshub-ts/assembly/cosmos/staking/v1beta1/MsgDelegate";
 
 function logDelegator(any: Any): void {
-  if (any.typeUrl == '/cosmos.staking.v1beta1.MsgDelegate') {
+  if (any.typeUrl == "/cosmos.staking.v1beta1.MsgDelegate") {
     const message = decodeMsgDelegate(any.value);
     console.log(message.delegatorAddress);
   }
