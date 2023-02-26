@@ -1,15 +1,16 @@
 # cosmoshub-ts
 
-TypeScript/AssemblyScript library for decoding Cosmos Hub messages.
+An AssemblyScript library for decoding Cosmos Hub messages.
 
 ## Usage
 
 ```typescript
-import { cosmos, google } from "@graphprotocol/cosmoshub-ts";
+import { Any } from "@graphprotocol/cosmoshub-ts/assembly/google/protobuf/Any";
+import { decodeMsgDelegate } from "@graphprotocol/cosmoshub-ts/assembly/cosmos/staking/v1beta1/MsgDelegate";
 
-function logDelegator(any: google.protobuf.Any) {
+function logDelegator(any: Any): void {
   if (any.typeUrl == '/cosmos.staking.v1beta1.MsgDelegate') {
-    const message = cosmos.staking.v1beta1.decodeMsgDelegate(any.value);
+    const message = decodeMsgDelegate(any.value);
     console.log(message.delegatorAddress);
   }
 }
